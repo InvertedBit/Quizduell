@@ -8,7 +8,14 @@ public class Question
   private ArrayList<Answer> answers;
   
   public void printQuestion()
-  {}
+  {
+	  System.out.println(this.text);
+	  
+	  for(Answer answer:this.answers)
+	  {
+		  answer.printAnswer();
+	  }
+  }
   
   public boolean selectAnswer(char answer)
   {

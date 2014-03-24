@@ -14,6 +14,18 @@ public class Player
   
   public void askQuestion(Question question)
   {
-    
+	  question.printQuestion();
+	  String answer = System.console().readLine();
+	  char answerLetter = answer.charAt(0);
+	  if(question.selectAnswer(answerLetter))
+	  {
+		  this.score++;
+	  }
+	  System.out.println("Your current score is: " + this.score);
+  }
+  
+  public Player(String initName)
+  {
+	  this.name = initName;
   }
 }

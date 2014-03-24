@@ -9,9 +9,18 @@ public class Answer {
 	
 	public boolean getIsCorrect()
 	{
-		return true;
+		return this.isCorrect;
 	}
 	
+	public char getLetter()
+	{
+		return this.letter;
+	}
+	
+	public void printAnswer()
+	{
+		System.out.println(this.letter + ": " + this.text);
+	}
 	
 	
 }
